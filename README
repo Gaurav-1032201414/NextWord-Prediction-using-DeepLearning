@@ -1,25 +1,34 @@
 NEXT-WORD PREDICTION USING DEEP LEARNING
+
 Identifying the most likely word to follow a given string of words is the basic goal of the Natural Language Processing (NLP) task of "next word prediction." This predictive skill is essential in various applications, including text auto-completion, speech recognition, and machine translation. Deep learning approaches have transformed NLP by attaining remarkable success in various language-related tasks, such as next-word prediction.
 Deep learning models are excellent at identifying complex dependencies and patterns in sequential data, which makes them suitable for challenges requiring the prediction of the next word. These models may successfully describe the context and make precise predictions by utilising recurrent neural networks (RNNs) and their variations, such as Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU).
 There are many benefits to being able to correctly predict the following word in a given situation. Offering relevant and coherent word suggestions improves the user experience in auto-completion systems.
+
+
 MODEL ARCHITECTURE
 The model architecture is a critical component in building an effective next word prediction system using deep learning in NLP. One common approach is to utilize recurrent neural networks (RNNs) or their variants, such as Long Short-Term Memory (LSTM) or Gated Recurrent Unit (GRU). These architectures are specifically designed to capture sequential dependencies in the input text, enabling accurate predictions of the next word.
 Recurrent Neural Networks (RNNs): Recurrent Neural Networks are a class of neural networks that can process sequential data by maintaining hidden states that capture the context and information from previous inputs. RNNs have loops within their architecture that allow them to store and propagate information through time.
 Long Short-Term Memory (LSTM): LSTM is a specialized variant of RNNs that overcomes the limitations of traditional RNNs, such as the vanishing gradient problem. LSTM introduces a memory cell that allows the network to selectively store and retrieve information over long sequences, making it particularly effective in modeling long-term dependencies.
 Gated Recurrent Unit (GRU): GRU is another variant of RNNs that simplifies the architecture of LSTM by merging the cell state and hidden state into a single state vector. GRU also introduces gating mechanisms to control the flow of information, making it computationally efficient while still capturing long-term dependencies.
+
+
 MODEL ARCHITECTURE FOR NEXT WORD PREDICTION 
 The model architecture for next word prediction typically consists of the following components:
 Embedding Layer: The word embeddings, often referred to as distributed representations of words, are learned by the embedding layer. It captures semantic and contextual information by mapping every word in the lexicon to a dense vector representation. The model can be trained to change these embeddings as trainable parameters.
 Recurrent Layers: The recurrent layers, like LSTM or GRU, process the input word embeddings in a sequential order and keep hidden states that record the sequential data. The model can learn the contextual connections between words and their placements in the sequence thanks to these layers.
 Dense Layers: One or more dense layers are then added after the recurrent layers to convert the learnt features into the appropriate output format. When predicting the next word, the dense layers translate the hidden representations to a probability distribution across the vocabulary, indicating the likelihood that each word will be the following word.
+
 TRAINING AND OPTIMIZATION: 
 The model is trained using a large corpus of text data, where the input sequences are paired with their corresponding target word. The training process involves optimizing the model's parameters by minimizing a suitable loss function, such as categorical cross-entropy. The optimization is typically performed using an optimization algorithm like Adam or Stochastic Gradient Descent (SGD).
+
 INFERENCE AND PREDICTION: 
 The model can be used to predict the next word once it has been trained. The trained model receives an input of a list of words, processes it through the learned architecture, and outputs a probability distribution across the vocabulary. The anticipated next word is then chosen as the one with the highest likelihood.
 We can create reliable and accurate next word prediction models for NLP by combining the strength of recurrent neural networks, such LSTM or GRU, with the right training and optimisation methods. The model design successfully captures the text's sequential dependencies, enabling the system to produce fluent and contextually relevant predictions.
 
+
 CODE IMPLEMENTATION
 Here is the simpler way of implementation
+
 1. IMPORT LIBRARIES
 The necessary libraries are imported. TensorFlow is imported as 'tf' to utilize its functionalities for deep learning. The Sequential model from Keras is imported to build a sequential neural network, and specific layers such as Embedding, LSTM, and Dense are imported. Numpy is imported as np for generating arrays and regex as re for data processing pattern recognition.
 
